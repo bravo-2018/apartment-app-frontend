@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Home from './pages/Home'
-import Apartments from './pages/Apartments'
-import AddApartment from './pages/AddApartment'
-import ShowApartment from './pages/ShowApartment'
+import ApartmentCtr from './containers/ApartmentContainer'
+
+
 import Login from './pages/Login';
 import Header from './components/Header'
 
@@ -15,13 +15,11 @@ class App extends Component {
 			<div>
 				<Header />
 				<Router>
-					<Switch>
-						<Route exact path="/apartments" component={Apartments} />
-						<Route exact path="/apartments/new" component={AddApartment} />
-						<Route path="/apartments/:id" component={ShowApartment} />
-						<Route exact path="/login" component={Login} />
+					<div>
+						<Route path="/apartments" component={ApartmentCtr} />
+						<Route path="/login" component={Login} />
 						<Route exact path="/" component={Home} />
-			  		</Switch>
+					</div>
 				</Router>
 			</div>
 		);

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {getApartments} from '../api'
 
-console.log(getApartments());
+// console.log(getApartments());
 
 class Apartments extends Component {
 	constructor(props){
@@ -15,7 +15,7 @@ class Apartments extends Component {
 	componentWillMount() {
 		getApartments()
 		.then(json => {
-			console.log(json);
+			// console.log(json);
 			this.setState({
 				status: "loaded",
 				apartments: json

@@ -13,7 +13,7 @@ class ShowApartment extends Component {
 	componentWillMount() {
 		getApartment(this.props.match.params.id)
 		.then(json => {
-			console.log(json);
+			// console.log(json);
 			this.setState({
 				status: "loaded",
 				apartment: json

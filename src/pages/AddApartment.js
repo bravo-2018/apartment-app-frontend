@@ -18,6 +18,7 @@ class AddApartment extends Component {
 			},
 			POSTsuccess: false,
 		}
+		console.log("I EXIST!!");
 	}
 
 	handleInput(e) {
@@ -37,12 +38,12 @@ class AddApartment extends Component {
 		// get the completed form information from state
 		let {form} = this.state
 
-		console.log(form);
+		// console.log(form);
 
 		// call the API addAparment function
 		addApartment(form)
 		.then(resp => {
-			console.log(resp);
+			// console.log(resp);
 			this.setState({
 				POSTsuccess: true
 			})

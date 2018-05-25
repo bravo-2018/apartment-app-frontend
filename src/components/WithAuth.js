@@ -14,7 +14,7 @@ export default function withAuth(WrappedComponent) {
 		componentWillMount() {
 			if(!Auth.loggedIn()) {
 				console.log("not logged in!");
-				this.props.history.replace('/login')
+				// this.props.history.replace('/login')
 			} else {
 				try {
 					const userId = Auth.getUserId()
